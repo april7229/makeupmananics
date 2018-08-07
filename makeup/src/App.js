@@ -5,64 +5,52 @@ import './App.css';
 class App extends Component {
   render() {
     return <div className="header">
-        <div className="container-fluid" />
-        <div className="container" />
-        <div className="container-fluid sticky-top" />
-        <div className="container" />
-        <div className="d-flex justify-content-end" />
-        <div className=" navbar navbar-expand-lg navbar-light bg-light" />
-
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li classNamae="navbar-nav">
-              <a className="nav-item" href="#">
-                Home Page
-              </a>
+    
+      <div ClassName="wrapper">
+        <nav>
+          <div className="logo">LOGO</div>
+          <ul>
+            <li>
+              <a href="#">Home</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                About Us
-              </a>
+            <li>
+              <a href="#">What's New?!</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                About Us
-              </a>
+            <li>
+              <a href="#">Product</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                What's New?!
-              </a>
+            <li>
+              <a href="#">Upcoming</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Product Line
-              </a>
+            <li>
+              <a href="#">Contact us</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Contact Us
-              </a>
+            <li>
+              <a class="active" href="#">
+                Sign In
+            </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Shopping Cart
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                UpComing Events
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                UpComing Products
-              </a>
+            <li>
+              <a href="#">Shopping Cart</a>
             </li>
           </ul>
-        </div>
-      </div>;
+        </nav>
+        <section class="sec1" />
+        {/* <section class="content">
+         Weather factors and postal delivery procedures are not in our
+          control. Once items are shipped, we no longer have access to the
+          physical products. When you receive an email containing a tracking
+          number, allow at least 24 hours to see transit/movement status. We
+          are not responsible for lost or stolen items, or damages incurred by
+          the USPS. Please contact the USPS regarding concerns about your
+          package. Returns and refunds will be provided sans shipping costs,
+          as we do not charge a typical re-stocking fee of products/inventory
+          returned by the USPS for delivery failures.
+      </section> */}
+      </div>
+      </div>
   }
-}
-
-export default App;
+        
+    }
+    
+    export default App;
