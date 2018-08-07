@@ -8,7 +8,7 @@ class App extends Component {
     
       <div ClassName="wrapper">
         <nav>
-          <div className="logo">LOGO</div>
+          <div className="logo" href="image/logo.png">LOGO</div>
           <ul>
             <li>
               <a href="#">Home</a>

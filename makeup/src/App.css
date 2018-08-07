@@ -33,8 +33,7 @@ nav.logo{
     float: left;
     font-size: 24px;
     transition:.3s;
-}
-nav.black .logo{
+    background-image:url(image/logo.jpg);
     color: #fff;
 
 }
