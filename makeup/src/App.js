@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
     return <div className="header">
     
-      <div ClassName="wrapper">
+      <div className="wrapper">
         <nav>
-          <div className="logo" href="image/logo.png">LOGO</div>
+          <div className="logo">
+            <img src ="image/Logo.jpg" alt="logo" />
+          </div>
           <ul>
             <li>
               <a href="#">Home</a>
@@ -26,8 +27,8 @@ class App extends Component {
               <a href="#">Contact us</a>
             </li>
             <li>
-              <a class="active" href="#">
-                Sign In
+              <a className="active" href="/signin.js">
+                SignIn 
             </a>
             </li>
             <li>
@@ -35,7 +36,7 @@ class App extends Component {
             </li>
           </ul>
         </nav>
-        <section class="sec1" />
+        <section className="sec1" />
         {/* <section class="content">
          Weather factors and postal delivery procedures are not in our
           control. Once items are shipped, we no longer have access to the
