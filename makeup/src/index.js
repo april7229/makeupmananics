@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-import SignIn from './SignIn/signin.js';
+import { Router, Route } from 'react-router';
+import { firebaseApp } from './firebase';
+
+import App from './components/App';
+import signin from './components/signin';
+
 
 firebaseApp.auth().onAuthStateCHanged( user =>
 {
@@ -16,10 +18,9 @@ firebaseApp.auth().onAuthStateCHanged( user =>
     }
 })
 ReactDOM.render(
-    <Router path="/" history={BrowserHistory}>
-        <Route path="/app" App={App} />
-        <Route path="/signin" SignIn={signin} />
+    <Router>
+        <Route path="/App" App={App} />
+        <Route path="/signin" signin={signin} />
         </Router>
         
     , document.getElementById( 'root' ) );
-registerServiceWorker();

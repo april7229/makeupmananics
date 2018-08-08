@@ -1,25 +1,27 @@
-import React from 'react';
-import reactDom from 'react-dom';
-import { Router, Route, browserHistory } from 'react';
-import { firebaseApp } from '../firebase';
 
-class SignIn extends Component
-{
-    constructor( props )
-    {
+
+import { firebaseApp } from '../firebase';
+import React, { Component } from 'react';
+
+class SignIn extends Component{
+    constructor( props ){
         super( props );
         this.state = {
-            email: "",
-            password: ""
+            email: '',
+            password: '',
+            error: {
+                message:''
+            }
         }
     }
-        signUp() {
+        SignIn() {
             console.log( 'this.state', this.state );
             const { email, password } = this.state;
             firebaseApp.auth().createUserWithEmailAndPassword( email, password )
                 .catch( error =>
                 {
-                    console.log( 'error, error' );
+                    
+                    this.setState( { error } )
             }  )
         }
      
@@ -46,9 +48,11 @@ class SignIn extends Component
                     type="button"
                     onClick={()=> this.SignUp() }
                 >  
-                    Sign Up
+                    Sign In
                     </button>
-                </div>
+            </div>
+            <div>{this.state.error.message}</div>
+            
                 
         )
     }

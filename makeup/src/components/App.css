@@ -69,7 +69,7 @@ nav ul li a.active{
 section.sec1{
     width: 100%;
     height:100vh;
-    background-image:url(image/cee-cee.jpg);
+    background-image:url(,/image/cee-cee.jpg);
     backGround-size:cover;
     background-position:center;
     box-sizing:border-box;
