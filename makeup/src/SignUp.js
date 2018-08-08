@@ -1,30 +1,31 @@
-
-
 import { firebaseApp } from '../firebase';
 import React, { Component } from 'react';
 
-class SignIn extends Component{
-    constructor( props ){
+class SignUp extends Component
+{
+    constructor( props )
+    {
         super( props );
         this.state = {
             email: '',
             password: '',
             error: {
-                message:''
+                message: ''
             }
         }
     }
-        SignIn() {
-            console.log( 'this.state', this.state );
-            const { email, password } = this.state;
-            firebaseApp.auth().createUserWithEmailAndPassword( email, password )
-                .catch( error =>
-                {
-                    
-                    this.setState( { error } )
-            }  )
-        }
-     
+    SignUp()
+    {
+        console.log( 'this.state', this.state );
+        const { email, password } = this.state;
+        firebaseApp.auth().createUserWithEmailAndPassword( email, password )
+            .catch( error =>
+            {
+
+                this.setState( { error } )
+            } )
+    }
+
     render()
     {
         return (
@@ -46,16 +47,16 @@ class SignIn extends Component{
                 <button
                     className="btn  btn-primary"
                     type="button"
-                    onClick={() => this.SignIn()}
+                    onClick={() => this.SignUp()}
                 >
-                    Sign In
+                    Sign Up
                     </button>
             </div>
-    
-            
-                
-    )
+
+
+
+        )
     }
 }
 
-export default SignIn; 
+export default SignUp; 
