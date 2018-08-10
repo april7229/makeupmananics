@@ -7,7 +7,7 @@ import App from './components/App';
 import signin from './components/signin';
 
 
-firebaseApp.auth().onAuthStateCHanged( user =>
+firebaseApp.auth().onAuthStateChanged( user =>
 {
     if ( user )
     {
